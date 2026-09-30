@@ -1,0 +1,24 @@
+%YAML 1.1
+# ROS buildfarm index file for the REP-159 test harness on build.test.ros2.org.
+# Not read by production job generation, which uses index.yaml. Lists only
+# the two downstream distributions of rep159-testing/rep159-rosdistro;
+# upstream has no jobs of its own, srcext rebuilds it.
+---
+distributions:
+  binext:
+    ci_builds:
+      rep159: binext/ci-rep159.yaml
+    notification_emails:
+    - jrivero@honurobotics.com
+  srcext:
+    ci_builds:
+      rep159: srcext/ci-rep159.yaml
+    notification_emails:
+    - jrivero@honurobotics.com
+jenkins_url: https://build.test.ros2.org
+notification_emails:
+- jrivero@honurobotics.com
+prerequisites:
+rosdistro_index_url: https://raw.githubusercontent.com/rep159-testing/rep159-rosdistro/main/index-v4.yaml
+type: buildfarm
+version: 1
