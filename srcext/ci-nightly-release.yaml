@@ -1,7 +1,9 @@
 %YAML 1.1
 # REP-159 harness, srcext: extends upstream with source_rebuild. The job asks
 # for downstream_src_a and its dependencies; the walk rebuilds upstream_c,
-# upstream_b and upstream_a from source. No repos file.
+# upstream_b and upstream_a from source. No repos file. Named after Lyrical's
+# nightly-release, which also builds its distribution from source; no
+# schedule: triggered by hand.
 ---
 build_tool: colcon
 build_tool_args: '--cmake-args -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=ON --no-warn-unused-cli'

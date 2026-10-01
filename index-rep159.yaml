@@ -1,18 +1,24 @@
 %YAML 1.1
 # ROS buildfarm index file for the REP-159 test harness on build.test.ros2.org.
-# Not read by production job generation, which uses index.yaml. Lists only
-# the two downstream distributions of rep159-testing/rep159-rosdistro;
-# upstream has no jobs of its own, srcext rebuilds it.
+# Not read by production job generation, which uses index.yaml. Lists the
+# three distributions of rep159-testing/rep159-rosdistro. The build names
+# follow Lyrical's (lyrical/ci-nightly-release.yaml) wherever a job does the
+# same thing, so the jobs are <D>ci__nightly-release_<os>_<code>_<arch>.
 ---
 distributions:
   binext:
     ci_builds:
-      rep159: binext/ci-rep159.yaml
+      nightly-release: binext/ci-nightly-release.yaml
     notification_emails:
     - jrivero@honurobotics.com
   srcext:
     ci_builds:
-      rep159: srcext/ci-rep159.yaml
+      nightly-release: srcext/ci-nightly-release.yaml
+    notification_emails:
+    - jrivero@honurobotics.com
+  upstream:
+    ci_builds:
+      nightly-release: upstream/ci-nightly-release.yaml
     notification_emails:
     - jrivero@honurobotics.com
 jenkins_url: https://build.test.ros2.org

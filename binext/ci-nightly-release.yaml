@@ -4,6 +4,8 @@
 # the binaries upstream releases (ros-upstream-*, under /opt/ros/upstream),
 # installed by rosdep. Where those binaries are published is not decided yet,
 # so this file lists no repository carrying them and the job cannot pass.
+# Named after Lyrical's nightly-release: it builds from source every package
+# binext owns; no schedule: triggered by hand.
 ---
 build_tool: colcon
 build_tool_args: '--cmake-args -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=ON --no-warn-unused-cli'
