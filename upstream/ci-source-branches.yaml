@@ -1,9 +1,12 @@
 %YAML 1.1
 # REP-159 harness, upstream: every repository of the distribution from its
-# source entry (the main branch of rep159-testing/<repo>). ros_buildfarm walks
-# dependencies only for package_names, which it always checks out at their
-# release tags, so the repositories are listed by name. No schedule: triggered
-# by hand.
+# source entry (the main branch of rep159-testing/<repo>), except
+# ros_workspace. ros_buildfarm walks dependencies only for package_names, which
+# it always checks out at their release tags, so the repositories are listed
+# by name. ros_workspace is left out as in ros2.repos: it only builds into a
+# merged install (it looks for ament_package in its own install prefix), and
+# ros_buildfarm CI installs each package in its own prefix. No schedule:
+# triggered by hand.
 ---
 build_tool: colcon
 build_tool_args: '--cmake-args -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=ON --no-warn-unused-cli'
@@ -16,7 +19,6 @@ jenkins_job_timeout: 120  # first run builds every Docker image cold
 repository_names:
 - ament_package
 - ament_cmake_core
-- ros_workspace
 - upstream_a
 - upstream_b
 - upstream_c

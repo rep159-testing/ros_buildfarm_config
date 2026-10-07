@@ -1,10 +1,10 @@
 %YAML 1.1
-# REP-159 harness, upstream: every package of the distribution from its bloom
-# release repository, at release/upstream/<package>/<version>. The two leaves
-# are named and package_dependencies adds the rest: upstream_c brings
-# upstream_b and upstream_a, ros_workspace brings ament_cmake_core and
-# ament_package. ros_workspace is named because no package.xml depends on it
-# (bloom adds it to debian/control only). No schedule: triggered by hand.
+# REP-159 harness, upstream: every package of the distribution except
+# ros_workspace from its bloom release repository, at
+# release/upstream/<package>/<version>. The two leaves are named and
+# package_dependencies adds the rest: upstream_c brings upstream_b and
+# upstream_a, ament_cmake_core brings ament_package. ros_workspace is left out
+# as in ci-source-branches.yaml. No schedule: triggered by hand.
 ---
 build_tool: colcon
 build_tool_args: '--cmake-args -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=ON --no-warn-unused-cli'
@@ -17,7 +17,7 @@ jenkins_job_timeout: 120  # first run builds every Docker image cold
 package_dependencies: true
 package_names:
 - upstream_c
-- ros_workspace
+- ament_cmake_core
 repositories:
   keys:
   - |
