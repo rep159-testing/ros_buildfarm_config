@@ -19,6 +19,8 @@ distributions:
   upstream:
     ci_builds:
       nightly-release: upstream/ci-nightly-release.yaml
+      release-branches: upstream/ci-release-branches.yaml
+      source-branches: upstream/ci-source-branches.yaml
     notification_emails:
     - jrivero@honurobotics.com
 jenkins_url: https://build.test.ros2.org
