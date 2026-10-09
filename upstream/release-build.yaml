@@ -1,38 +1,33 @@
 %YAML 1.1
-# ROS buildfarm index file for the REP-159 test harness on build.test.ros2.org.
-# Not read by production job generation, which uses index.yaml. Lists the
-# three distributions of rep159-testing/rep159-rosdistro. The build names
-# follow Lyrical's (lyrical/ci-nightly-release.yaml) wherever a job does the
-# same thing, so the jobs are <D>ci__nightly-release_<os>_<code>_<arch>.
-# upstream also has a release build: binaries go to repo.test.ros2.org.
+# ROS buildfarm release-build file for the REP-159 test harness.
+# Follows ros-staging's cargotest/release-build.yaml: releases go to the test
+# farm's own repository host, repo.test.ros2.org, never to repo.ros2.org.
+# Maintainer notifications are off: ament_package, ament_cmake_core and
+# ros_workspace are copies that still name Open Robotics maintainers.
 ---
-distributions:
-  binext:
-    ci_builds:
-      nightly-release: binext/ci-nightly-release.yaml
-    notification_emails:
-    - jrivero@honurobotics.com
-  srcext:
-    ci_builds:
-      nightly-release: srcext/ci-nightly-release.yaml
-    notification_emails:
-    - jrivero@honurobotics.com
-  upstream:
-    ci_builds:
-      nightly-release: upstream/ci-nightly-release.yaml
-      release-branches: upstream/ci-release-branches.yaml
-      source-branches: upstream/ci-source-branches.yaml
-    release_builds:
-      default: upstream/release-build.yaml
-    notification_emails:
-    - jrivero@honurobotics.com
-jenkins_url: https://build.test.ros2.org
-notification_emails:
-- jrivero@honurobotics.com
-prerequisites:
-  debian_repositories:
-  - http://repo.test.ros2.org/ubuntu/building
-  debian_repository_keys:
+abi_incompatibility_assumed: true
+
+jenkins_binary_job_priority: 80
+jenkins_binary_job_timeout: 120
+jenkins_source_job_priority: 70
+jenkins_source_job_timeout: 30
+notifications:
+  emails:
+  - jrivero@honurobotics.com
+  maintainers: false
+package_dependency_behavior:
+  include_test_dependencies: false
+  run_package_tests: false
+sync:
+  packages:
+  - ament_cmake_core
+  - ament_package
+  - ros_workspace
+  - upstream_a
+  - upstream_b
+  - upstream_c
+repositories:
+  keys:
   - |
     -----BEGIN PGP PUBLIC KEY BLOCK-----
 
@@ -64,6 +59,13 @@ prerequisites:
     NCVR
     =xhuY
     -----END PGP PUBLIC KEY BLOCK-----
-rosdistro_index_url: https://raw.githubusercontent.com/rep159-testing/rep159-rosdistro/main/index-v4.yaml
-type: buildfarm
-version: 1
+  urls:
+  - http://repo.test.ros2.org/ubuntu/building
+target_repository: http://repo.test.ros2.org/ubuntu/building
+targets:
+  ubuntu:
+    resolute:
+      amd64:
+type: release-build
+upload_credential_id: jenkins-agent
+version: 2
