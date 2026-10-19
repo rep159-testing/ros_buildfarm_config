@@ -79,6 +79,6 @@ prerequisites:
     NCVR
     =xhuY
     -----END PGP PUBLIC KEY BLOCK-----
-rosdistro_index_url: https://raw.githubusercontent.com/rep159-testing/rep159-rosdistro/69aef4d5c9646f87aa5366917a4fad6cb3b74eff/index-v4.yaml
+rosdistro_index_url: https://raw.githubusercontent.com/rep159-testing/rep159-rosdistro/main/index-v4.yaml
 type: buildfarm
 version: 1
