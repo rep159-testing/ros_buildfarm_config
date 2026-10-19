@@ -64,6 +64,6 @@ prerequisites:
     NCVR
     =xhuY
     -----END PGP PUBLIC KEY BLOCK-----
-rosdistro_index_url: https://raw.githubusercontent.com/rep159-testing/rep159-rosdistro/main/index-v4.yaml
+rosdistro_index_url: https://raw.githubusercontent.com/rep159-testing/rep159-rosdistro/feat/binary-naming-rule/index-v4.yaml
 type: buildfarm
 version: 1
