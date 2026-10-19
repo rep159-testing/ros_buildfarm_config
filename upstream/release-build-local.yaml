@@ -18,12 +18,7 @@ package_dependency_behavior:
   run_package_tests: false
 sync:
   packages:
-  - ament_cmake_core
-  - ament_package
-  - ros_workspace
   - upstream_a
-  - upstream_b
-  - upstream_c
 repositories:
   keys:
   - |
