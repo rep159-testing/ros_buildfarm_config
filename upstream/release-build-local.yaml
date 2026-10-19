@@ -1,0 +1,84 @@
+%YAML 1.1
+# ROS buildfarm release-build file for the REP-159 test harness on local cluster.
+# Releases go to the local cluster repository host (192.168.30.202:8088),
+# with fallback to repo.test.ros2.org for external building dependencies.
+---
+abi_incompatibility_assumed: true
+
+jenkins_binary_job_priority: 80
+jenkins_binary_job_timeout: 120
+jenkins_source_job_priority: 70
+jenkins_source_job_timeout: 30
+notifications:
+  emails:
+  - jrivero@honurobotics.com
+  maintainers: false
+package_dependency_behavior:
+  include_test_dependencies: false
+  run_package_tests: false
+sync:
+  packages:
+  - ament_cmake_core
+  - ament_package
+  - ros_workspace
+  - upstream_a
+  - upstream_b
+  - upstream_c
+repositories:
+  keys:
+  - |
+    -----BEGIN PGP PUBLIC KEY BLOCK-----
+
+    mDMEatMHRhYJKwYBBAHaRw8BAQdACqVbcaPlUMP6wgIIO7CGWtCpR0YAIuitdZkY
+    TDZD/qK0JUxvY2FsIFJPUyBCdWlsZGZhcm0gPGJ1aWxkZmFybUBsb2NhbD6IkAQT
+    FgoAOBYhBJy9YkHIem0VpP3wpPfkSaryHXOhBQJq0wdGAhsDBQsJCAcCBhUKCQgL
+    AgQWAgMBAh4BAheAAAoJEPfkSaryHXOhebcBALKpSvHhWxnYkqwET8MK0qSRNJSK
+    dyskbY31G/tnwapWAQDVcJLhUaUQV7L8j5XZ4pAwq+IhnfcRjlh6JqZqETaGCrg4
+    BGrTB0YSCisGAQQBl1UBBQEBB0Af8B6u1JUPVoTQet3DuGETR2NCLHShLphTHvq8
+    xAojSgMBCAeIeAQYFgoAIBYhBJy9YkHIem0VpP3wpPfkSaryHXOhBQJq0wdGAhsM
+    AAoJEPfkSaryHXOhh50A/jIqubXwjTuluMZx+x2s6Ki83ggNvq8UX1o7FYHxpx0S
+    AP4rBbG09Ikc3Ftsx1X3daDtv4tTLIEuEda/b94bgcReAg==
+    =LLSO
+    -----END PGP PUBLIC KEY BLOCK-----
+  - |
+    -----BEGIN PGP PUBLIC KEY BLOCK-----
+
+    mQINBGYUJCYBEADXpKyb8PqEdQFXqW3iUWvfub0jd6cD0LJE9Huh4dCO0oStJzFJ
+    Ml9RJw5oBZA5zb08PysK4aRKr8Abd0I25EPYOe96I+S5zYNHBKosdMRDUwUYGK0H
+    41ih4NJ3hJ7BVivdBWln8CVPthUy4bNjaKAsNRB9qgcCc/DM6GTG/qD5pASGa2op
+    kB7KyeDrQ7Ykuz+vufteXO2k/LipSlzKGICmZp2907x9JSj/NywLR69pDm6fDjKo
+    DAkWFD5SrycRgvjBIM7hZk8BSs4XElYwPYOBtfSrf/yALg+PSFPO8NqlL0SLWCDe
+    kY78TYSrIJBrEghNKp2NuDeHjc0F775ncUs4i8LKX/RkEbSsGBgVH7cSwX5FTaMf
+    AkNzcfkjnpIT90XLkxoLlqdkI7A8jRMlnjWlwSBEPT4ouAQbpxHtk6ZZOgN+OX12
+    6knzaaIn7EZqqou+KsnoibWw+2l75/CuMk/bYJ/U8deMQUnQs/qct3CujeGE2Fvx
+    IeP+YZQkh2dsnKhwPPHTmOsb0WjFpI8yVP+F1GVBtCvLbOY9gwmioZvKhnBHVcPC
+    UqQvgwmZtOY0HREfaj4JbMkLqbyAnJik/gTFnGNStH4ADj+nfUhdHTGGiCpkDpdX
+    5nPGM6H+yEhtd5n8AK+tyosdPHvmD3SFvWh+j/SwZsheDZlNBawiOdhALQARAQAB
+    tEdST1MgQnVpbGRmYXJtIFNUQUdJTkcgKFJPUyBCdWlsZGZhcm0gU1RBR0lORykg
+    PHN0ZXZlbkBvcGVucm9ib3RpY3Mub3JnPokCVwQTAQgAQQIbAwULCQgHAgIiAgYV
+    CgkICwIEFgIDAQIeBwIXgBYhBFMIeJMTPRbwRZ0jBUBQkdYdTBqoBQJqAzv9BQkH
+    BhvXAAoJEEBQkdYdTBqosHEQAJtz7XhdX9y3pvNkUSF0/CYr60Hr8g0WZuj6VJuz
+    w2MQ3O8DlnUcxKtFL9V7Xto0Kc4x7LTkqgNhpKw676TJ8jnyl7fDeBc9jMaIf2vZ
+    umFkkwLBhY9zAwenT2OwpX6QLeLcmsnTShoubV0p+l693a8Hk0iX1iULs3nIYHxs
+    t9OAW0mMO+5fch0Tfo4zc7T9zyqHZVkW11xn6ToSbG6XZ/pPGynbt/NnotA96T08
+    S3bGJVU2+4vl1EYhIUvUOALm6MhuvP1fgD0o3W3xN6DcfbVqtpuN3YzW1NiYf47b
+    Yq2TRTvRWLgDKYN0hWuUDlGhQG+kmvaAl6KHhimkCTiWlfkkLGP/qtNZAgkZf8PJ
+    Dyst/N1RFOMLxKtCjPGp4TtgK3fw+Fngf38/wCOl8BHvB3d4MEj+Dqk5vOZw/UcR
+    tChqRvJgBE65S+oymn5T0xqrqhqOiyz0ZQ3dG1FdUmME7m+6FFe0JdV6zKv9AjDI
+    8uj7JHNAdqZMZLA3JwCJodZ0qzgUxXbr0mQKOkE6FUjBEGVDmsSnav3RuId1A5QX
+    D8I6H3T5fpcxpCXlns2vNtLBtGVEYSeK0+TbFj1K7REPBZCkZbPy9HhttQtCCGI2
+    kyk7vauky58o6uQArX9A3ZKIVuYV6lV7gBKVFKWsu37k4HXES5la4HOl9LkdY5A7
+    NCVR
+    =xhuY
+    -----END PGP PUBLIC KEY BLOCK-----
+  urls:
+  - http://192.168.30.202:8088/ubuntu/building
+  - http://repo.test.ros2.org/ubuntu/building
+target_repository: http://192.168.30.202:8088/ubuntu/building
+targets:
+  ubuntu:
+    resolute:
+      amd64:
+type: release-build
+upload_credential_id: jenkins-agent
+version: 2
