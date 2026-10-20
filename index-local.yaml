@@ -47,7 +47,7 @@ distributions:
     - federico.rossi@creativa77.com.ar
   extendablechain:
     ci_builds:
-      binary-import: extendablechain/ci-nightly-release-local.yaml
+      chained-import: extendablechain/ci-nightly-release-local.yaml
     notification_emails:
     - federico.rossi@creativa77.com.ar
 
