@@ -26,6 +26,25 @@ distributions:
       default: upstream/release-build-local.yaml
     notification_emails:
     - jrivero@honurobotics.com
+  extendable:
+    ci_builds:
+      nightly-release: extendable/ci-nightly-release-local.yaml
+      release-branches: extendable/ci-release-branches-local.yaml
+      source-branches: extendable/ci-source-branches-local.yaml
+    release_builds:
+      default: extendable/release-build-local.yaml
+    notification_emails:
+    - jrivero@honurobotics.com
+  extendablesrc:
+    ci_builds:
+      nightly-release: extendablesrc/ci-nightly-release-local.yaml
+    notification_emails:
+    - jrivero@honurobotics.com
+  extendablebin:
+    ci_builds:
+      nightly-release: extendablebin/ci-nightly-release-local.yaml
+    notification_emails:
+    - jrivero@honurobotics.com
 jenkins_url: http://192.168.30.206:8080
 notification_emails:
 - jrivero@honurobotics.com
@@ -79,6 +98,6 @@ prerequisites:
     NCVR
     =xhuY
     -----END PGP PUBLIC KEY BLOCK-----
-rosdistro_index_url: https://raw.githubusercontent.com/rep159-testing/rep159-rosdistro/main/index-v4.yaml
+rosdistro_index_url: https://raw.githubusercontent.com/rep159-testing/rep159-rosdistro/feat/extendable-distro/index-v4.yaml
 type: buildfarm
 version: 1
