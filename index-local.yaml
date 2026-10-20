@@ -37,12 +37,12 @@ distributions:
     - federico.rossi@creativa77.com.ar
   extendablesrc:
     ci_builds:
-      nightly-release: extendablesrc/ci-nightly-release-local.yaml
+      source-rebuild: extendablesrc/ci-nightly-release-local.yaml
     notification_emails:
     - federico.rossi@creativa77.com.ar
   extendablebin:
     ci_builds:
-      nightly-release: extendablebin/ci-nightly-release-local.yaml
+      binary-import: extendablebin/ci-nightly-release-local.yaml
     notification_emails:
     - federico.rossi@creativa77.com.ar
 jenkins_url: http://192.168.30.206:8080
