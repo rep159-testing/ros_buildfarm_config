@@ -94,7 +94,9 @@ repositories:
     -----END PGP PUBLIC KEY BLOCK-----
   urls:
   - http://repos.ros.org/repos/ros_bootstrap
+  - http://192.168.30.202:8088/ubuntu/building
   - http://192.168.30.202:8088/ubuntu/testing
+  - http://repo.test.ros2.org/ubuntu/building
   - http://repo.test.ros2.org/ubuntu/testing
 targets:
   ubuntu:

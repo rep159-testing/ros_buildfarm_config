@@ -87,7 +87,8 @@ repositories:
   # Build tools only (colcon, rosdep, catkin_pkg, rosdistro modules): the CI
   # images install them from apt. No ros-* package comes from here.
   - http://repos.ros.org/repos/ros_bootstrap
-  # The parent's binaries (ros-upstream-*), signed by "ROS Buildfarm STAGING".
+  # The parent's binaries (ros-upstream-* / vendor-upstream-*), signed by "ROS Buildfarm STAGING".
+  - http://repo.test.ros2.org/ubuntu/building
   - http://repo.test.ros2.org/ubuntu/testing
 targets:
   ubuntu:
