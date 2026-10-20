@@ -12,6 +12,11 @@ jenkins_job_priority: 200
 jenkins_job_timeout: 120
 repository_names:
 - downstream_chain_a
+- downstream_bin_a
+- upstream_a
+- upstream_b
+- upstream_c
+
 
 repositories:
   keys:
