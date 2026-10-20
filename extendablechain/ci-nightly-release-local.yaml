@@ -10,9 +10,9 @@ build_environment_variables:
 jenkins_job_label: ci-agent
 jenkins_job_priority: 200
 jenkins_job_timeout: 120
-package_dependencies: true
-package_names:
+repository_names:
 - downstream_chain_a
+
 repositories:
   keys:
   - |
