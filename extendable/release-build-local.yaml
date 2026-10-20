@@ -9,7 +9,7 @@ jenkins_source_job_priority: 70
 jenkins_source_job_timeout: 30
 notifications:
   emails:
-  - jrivero@honurobotics.com
+  - federico.rossi@creativa77.com.ar
   maintainers: false
 package_dependency_behavior:
   include_test_dependencies: false

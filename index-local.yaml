@@ -34,20 +34,20 @@ distributions:
     release_builds:
       default: extendable/release-build-local.yaml
     notification_emails:
-    - jrivero@honurobotics.com
+    - federico.rossi@creativa77.com.ar
   extendablesrc:
     ci_builds:
       nightly-release: extendablesrc/ci-nightly-release-local.yaml
     notification_emails:
-    - jrivero@honurobotics.com
+    - federico.rossi@creativa77.com.ar
   extendablebin:
     ci_builds:
       nightly-release: extendablebin/ci-nightly-release-local.yaml
     notification_emails:
-    - jrivero@honurobotics.com
+    - federico.rossi@creativa77.com.ar
 jenkins_url: http://192.168.30.206:8080
 notification_emails:
-- jrivero@honurobotics.com
+- federico.rossi@creativa77.com.ar
 prerequisites:
   debian_repositories:
   - http://192.168.30.202:8088/ubuntu/building
