@@ -5,17 +5,13 @@ build_tool: colcon
 build_tool_args: '--cmake-args -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=ON --no-warn-unused-cli'
 build_tool_test_args: '--retest-until-pass 2 --ctest-args -LE xfail --pytest-args -m "not xfail"'
 build_environment_variables:
-  ROSDISTRO_INDEX_URL: 'https://raw.githubusercontent.com/rep159-testing/rep159-rosdistro/feat/stage3-chained-extensions/index-v4.yaml'
+  ROSDISTRO_INDEX_URL: 'https://raw.githubusercontent.com/rep159-testing/rep159-rosdistro/feat/stage3-binary-chained/index-v4.yaml'
   ROS_BUILDFARM_PARENT_RESULT_SPACES: '/opt/ros/extendable:/opt/ros/extendablebin'
 jenkins_job_label: ci-agent
 jenkins_job_priority: 200
 jenkins_job_timeout: 120
 repository_names:
 - downstream_chain_a
-- downstream_bin_a
-- upstream_a
-- upstream_b
-- upstream_c
 
 
 repositories:

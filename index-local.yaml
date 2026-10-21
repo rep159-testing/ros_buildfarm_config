@@ -43,6 +43,8 @@ distributions:
   extendablebin:
     ci_builds:
       binary-import: extendablebin/ci-nightly-release-local.yaml
+    release_builds:
+      default: extendablebin/release-build-local.yaml
     notification_emails:
     - federico.rossi@creativa77.com.ar
   extendablechain:
@@ -104,6 +106,6 @@ prerequisites:
     NCVR
     =xhuY
     -----END PGP PUBLIC KEY BLOCK-----
-rosdistro_index_url: https://raw.githubusercontent.com/rep159-testing/rep159-rosdistro/feat/stage3-chained-extensions/index-v4.yaml
+rosdistro_index_url: https://raw.githubusercontent.com/rep159-testing/rep159-rosdistro/feat/stage3-binary-chained/index-v4.yaml
 type: buildfarm
 version: 1
