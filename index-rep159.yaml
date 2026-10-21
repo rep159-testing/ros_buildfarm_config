@@ -52,6 +52,11 @@ distributions:
       chained-import: extendablechain/ci-nightly-release.yaml
     notification_emails:
     - federico.rossi@creativa77.com.ar
+  extendablemixed:
+    ci_builds:
+      mixed-chain: extendablemixed/ci-nightly-release.yaml
+    notification_emails:
+    - federico.rossi@creativa77.com.ar
 
 jenkins_url: https://build.test.ros2.org
 notification_emails:
@@ -91,6 +96,6 @@ prerequisites:
     NCVR
     =xhuY
     -----END PGP PUBLIC KEY BLOCK-----
-rosdistro_index_url: https://raw.githubusercontent.com/rep159-testing/rep159-rosdistro/feat/stage3-binary-chained/index-v4.yaml
+rosdistro_index_url: https://raw.githubusercontent.com/rep159-testing/rep159-rosdistro/feat/stage3-mixed/index-v4.yaml
 type: buildfarm
 version: 1
