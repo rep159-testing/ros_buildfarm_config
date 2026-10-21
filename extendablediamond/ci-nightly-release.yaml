@@ -1,0 +1,121 @@
+%YAML 1.1
+# REP-159 harness, extendablediamond: diamond extension (extendablebin binary_import + extendablesrc source_rebuild) on build.test.ros2.org.
+---
+build_tool: colcon
+build_tool_args: '--cmake-args -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=ON --no-warn-unused-cli'
+build_tool_test_args: '--retest-until-pass 2 --ctest-args -LE xfail --pytest-args -m "not xfail"'
+build_environment_variables:
+  ROSDISTRO_INDEX_URL: 'https://raw.githubusercontent.com/rep159-testing/rep159-rosdistro/feat/stage3-diamond/index-v4.yaml'
+  ROS_BUILDFARM_PARENT_RESULT_SPACES: '/opt/ros/extendable:/opt/ros/extendablebin'
+jenkins_job_label: ci-agent
+jenkins_job_priority: 200
+jenkins_job_timeout: 120
+repository_names:
+- downstream_chain_a
+- downstream_src_a
+
+repositories:
+  keys:
+  - |
+    -----BEGIN PGP PUBLIC KEY BLOCK-----
+
+    mQINBF/btn4BEADSD9KhOgzOwDFOw+ivJXt3lw6Ubyo6c2yXEEASnQpzQ2IPJBpQ
+    zAX+rncd76xNNgtAUmtPFdsWojwIOYvHLnCusmjB5zmpr08alKKUqKfjKI0ALfq8
+    xrv2F7AFeaV2FWaCrH8ZrNBxLUnm/1MZbrknvnh4J+1Bpzi4JQvYJ1hb2BUYCPBj
+    kXTpShj58yzlPvr5oDzmy++evPjVf8Lh5f0LxWtDlYK8NED0dBzHZlL1eeuEmNJP
+    Iw/UNVlhVgPv3j329sdmGja+uck5JEAlL0uRU4D83f/YndwUUX+I+Um5baGuyJ42
+    FXFtw9JHF3DJiERpYd/ZCPP8jQwAxKee2zukxUh/L1MCWBFoZCIuuy30ACq20gWZ
+    PAnDpqF9H/fzg3FQiwAaeF7ZCZPNvSCnV7myqdZ7C/adgayuRhT6vpMP48WACqV6
+    ndmYEJL2WC+eT7eDD6hEZpVnBNeuRA/RnU6aRgybZ2+rB+hhXTfX3xzLxqJeLIZ7
+    SWpXGNRZAmOy9Eqt/dKrzUUyrOXfgqHd75mWFlbHrQZ8tt0+1PE76XG4ZgT3pqOk
+    bHHqywJfJXpy5U62YBy0TruMM7WyKN8IrkvUdYkMGbyfVKudQha0lTIAvX8zeW1z
+    AHovXBFkdR9NgdggZV1XWdbBlscLOKLcg9t+HT2EKSvgx1sPJEhzBFdahwARAQAB
+    tFpST1MgQm9vdHN0cmFwIFJlcG9zaXRvcnkgKFNpZ25pbmcgS2V5IGZvciBST1Mg
+    Qm9vdHN0cmFwIFJlcG9zaXRvcnkpIDxyb3NAb3BlbnJvYm90aWNzLm9yZz6JAk4E
+    EwEIADgWIQRHMs5wbNexnbD/506O2y72YfyIDgUCX9u2fgIbAwULCQgHAgYVCgkI
+    CwIEFgIDAQIeAQIXgAAKCRCO2y72YfyIDksLD/9awISK9MlJJZ2W769Fj8D2JOEM
+    splwtVNBuADyH2rT2TjL5aY+V8/awq/DApl3ty/QpfM8qcybUyi94faAhdvYygMr
+    AvU3/VusaxexlJHKO9GkdFfFQTtcksWhV7+z21h1omq5RimInJA6eyrhsNjFnOiI
+    we4SG3Jwi+Scr0xPLIyuboacD+3AXxPaA3mwQjLnMyYMyBCZs7tTtET5FR6hAGIg
+    eptpm+Fiaosjub35/VB9r/JOjJCuiwKObMye+8jcDdR8umFxzqcgEe1TNQVBj5+V
+    I4ssbrzKvwAkte3mBEdndEBPbSlTAo0kd4ByMRZ5AWhqRdu4iabw8cz2IpGErUcb
+    K0ws76+D8PqnqjPqd5GkGxB54zLMMrrBya5+hnzyDifKzvv1M+L2xvFuICBLBTR7
+    FnRownLKmDXLXp/EloRpTvchsO9W+Y3cDTkzkKpaUgs8Gl4dI/zPkHEp8iZBZNsk
+    mEibjJ5g2qBAYr9GbyaUiifdmpUiDoJpCyDq22rKfFkZl7t1+1MVbjz92A8Vjesb
+    QHt0icnkrvwg7mYfmMcdVF4TVNaR2XzLTkAz62r1kOoXnPbzUTA1uiLakagsUG5G
+    YXyUVOJlJDTWr784FVSsEQIslvbO8dk3gmiOpurxBrLGn70SdhCnQRqSrjOnvzX7
+    3ih4hgyGHQOJ/7p5Rg==
+    =v6u9
+    -----END PGP PUBLIC KEY BLOCK-----
+  - |
+    -----BEGIN PGP PUBLIC KEY BLOCK-----
+
+    mQINBGYUJCYBEADXpKyb8PqEdQFXqW3iUWvfub0jd6cD0LJE9Huh4dCO0oStJzFJ
+    Ml9RJw5oBZA5zb08PysK4aRKr8Abd0I25EPYOe96I+S5zYNHBKosdMRDUwUYGK0H
+    41ih4NJ3hJ7BVivdBWln8CVPthUy4bNjaKAsNRB9qgcCc/DM6GTG/qD5pASGa2op
+    kB7KyeDrQ7Ykuz+vufteXO2k/LipSlzKGICmZp2907x9JSj/NywLR69pDm6fDjKo
+    DAkWFD5SrycRgvjBIM7hZk8BSs4XElYwPYOBtfSrf/yALg+PSFPO8NqlL0SLWCDe
+    kY78TYSrIJBrEghNKp2NuDeHjc0F775ncUs4i8LKX/RkEbSsGBgVH7cSwX5FTaMf
+    AkNzcfkjnpIT90XLkxoLlqdkI7A8jRMlnjWlwSBEPT4ouAQbpxHtk6ZZOgN+OX12
+    6knzaaIn7EZqqou+KsnoibWw+2l75/CuMk/bYJ/U8deMQUnQs/qct3CujeGE2Fvx
+    IeP+YZQkh2dsnKhwPPHTmOsb0WjFpI8yVP+F1GVBtCvLbOY9gwmioZvKhnBHVcPC
+    UqQvgwmZtOY0HREfaj4JbMkLqbyAnJik/gTFnGNStH4ADj+nfUhdHTGGiCpkDpdX
+    5nPGM6H+yEhtd5n8AK+tyosdPHvmD3SFvWh+j/SwZsheDZlNBawiOdhALQARAQAB
+    tEdST1MgQnVpbGRmYXJtIFNUQUdJTkcgKFJPUyBCdWlsZGZhcm0gU1RBR0lORykg
+    PHN0ZXZlbkBvcGVucm9ib3RpY3Mub3JnPokCVwQTAQgAQQIbAwULCQgHAgIiAgYV
+    CgkICwIEFgIDAQIeBwIXgBYhBFMIeJMTPRbwRZ0jBUBQkdYdTBqoBQJqAzv9BQkH
+    BhvXAAoJEEBQkdYdTBqosHEQAJtz7XhdX9y3pvNkUSF0/CYr60Hr8g0WZuj6VJuz
+    w2MQ3O8DlnUcxKtFL9V7Xto0Kc4x7LTkqgNhpKw676TJ8jnyl7fDeBc9jMaIf2vZ
+    umFkkwLBhY9zAwenT2OwpX6QLeLcmsnTShoubV0p+l693a8Hk0iX1iULs3nIYHxs
+    t9OAW0mMO+5fch0Tfo4zc7T9zyqHZVkW11xn6ToSbG6XZ/pPGynbt/NnotA96T08
+    S3bGJVU2+4vl1EYhIUvUOALm6MhuvP1fgD0o3W3xN6DcfbVqtpuN3YzW1NiYf47b
+    Yq2TRTvRWLgDKYN0hWuUDlGhQG+kmvaAl6KHhimkCTiWlfkkLGP/qtNZAgkZf8PJ
+    Dyst/N1RFOMLxKtCjPGp4TtgK3fw+Fngf38/wCOl8BHvB3d4MEj+Dqk5vOZw/UcR
+    tChqRvJgBE65S+oymn5T0xqrqhqOiyz0ZQ3dG1FdUmME7m+6FFe0JdV6zKv9AjDI
+    8uj7JHNAdqZMZLA3JwCJodZ0qzgUxXbr0mQKOkE6FUjBEGVDmsSnav3RuId1A5QX
+    D8I6H3T5fpcxpCXlns2vNtLBtGVEYSeK0+TbFj1K7REPBZCkZbPy9HhttQtCCGI2
+    kyk7vauky58o6uQArX9A3ZKIVuYV6lV7gBKVFKWsu37k4HXES5la4HOl9LkdY5A7
+    NCVR
+    =xhuY
+    -----END PGP PUBLIC KEY BLOCK-----
+  - |
+    -----BEGIN PGP PUBLIC KEY BLOCK-----
+
+    mQINBGYUJCYBEADXpKyb8PqEdQFXqW3iUWvfub0jd6cD0LJE9Huh4dCO0oStJzFJ
+    Ml9RJw5oBZA5zb08PysK4aRKr8Abd0I25EPYOe96I+S5zYNHBKosdMRDUwUYGK0H
+    41ih4NJ3hJ7BVivdBWln8CVPthUy4bNjaKAsNRB9qgcCc/DM6GTG/qD5pASGa2op
+    kB7KyeDrQ7Ykuz+vufteXO2k/LipSlzKGICmZp2907x9JSj/NywLR69pDm6fDjKo
+    DAkWFD5SrycRgvjBIM7hZk8BSs4XElYwPYOBtfSrf/yALg+PSFPO8NqlL0SLWCDe
+    kY78TYSrIJBrEghNKp2NuDeHjc0F775ncUs4i8LKX/RkEbSsGBgVH7cSwX5FTaMf
+    AkNzcfkjnpIT90XLkxoLlqdkI7A8jRMlnjWlwSBEPT4ouAQbpxHtk6ZZOgN+OX12
+    6knzaaIn7EZqqou+KsnoibWw+2l75/CuMk/bYJ/U8deMQUnQs/qct3CujeGE2Fvx
+    IeP+YZQkh2dsnKhwPPHTmOsb0WjFpI8yVP+F1GVBtCvLbOY9gwmioZvKhnBHVcPC
+    UqQvgwmZtOY0HREfaj4JbMkLqbyAnJik/gTFnGNStH4ADj+nfUhdHTGGiCpkDpdX
+    5nPGM6H+yEhtd5n8AK+tyosdPHvmD3SFvWh+j/SwZsheDZlNBawiOdhALQARAQAB
+    tEdST1MgQnVpbGRmYXJtIFNUQUdJTkcgKFJPUyBCdWlsZGZhcm0gU1RBR0lORykg
+    PHN0ZXZlbkBvcGVucm9ib3RpY3Mub3JnPokCVwQTAQgAQQIbAwULCQgHAgIiAgYV
+    CgkICwIEFgIDAQIeBwIXgBYhBFMIeJMTPRbwRZ0jBUBQkdYdTBqoBQJqAzv9BQkH
+    BhvXAAoJEEBQkdYdTBqosHEQAJtz7XhdX9y3pvNkUSF0/CYr60Hr8g0WZuj6VJuz
+    w2MQ3O8DlnUcxKtFL9V7Xto0Kc4x7LTkqgNhpKw676TJ8jnyl7fDeBc9jMaIf2vZ
+    umFkkwLBhY9zAwenT2OwpX6QLeLcmsnTShoubV0p+l693a8Hk0iX1iULs3nIYHxs
+    t9OAW0mMO+5fch0Tfo4zc7T9zyqHZVkW11xn6ToSbG6XZ/pPGynbt/NnotA96T08
+    S3bGJVU2+4vl1EYhIUvUOALm6MhuvP1fgD0o3W3xN6DcfbVqtpuN3YzW1NiYf47b
+    Yq2TRTvRWLgDKYN0hWuUDlGhQG+kmvaAl6KHhimkCTiWlfkkLGP/qtNZAgkZf8PJ
+    Dyst/N1RFOMLxKtCjPGp4TtgK3fw+Fngf38/wCOl8BHvB3d4MEj+Dqk5vOZw/UcR
+    tChqRvJgBE65S+oymn5T0xqrqhqOiyz0ZQ3dG1FdUmME7m+6FFe0JdV6zKv9AjDI
+    8uj7JHNAdqZMZLA3JwCJodZ0qzgUxXbr0mQKOkE6FUjBEGVDmsSnav3RuId1A5QX
+    D8I6H3T5fpcxpCXlns2vNtLBtGVEYSeK0+TbFj1K7REPBZCkZbPy9HhttQtCCGI2
+    kyk7vauky58o6uQArX9A3ZKIVuYV6lV7gBKVFKWsu37k4HXES5la4HOl9LkdY5A7
+    NCVR
+    =xhuY
+    -----END PGP PUBLIC KEY BLOCK-----
+  urls:
+  - http://repos.ros.org/repos/ros_bootstrap
+  - http://repo.test.ros2.org/ubuntu/building
+  - http://repo.test.ros2.org/ubuntu/testing
+targets:
+  ubuntu:
+    resolute:
+      amd64:
+type: ci-build
+version: 1

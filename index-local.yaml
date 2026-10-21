@@ -57,6 +57,11 @@ distributions:
       mixed-chain: extendablemixed/ci-nightly-release-local.yaml
     notification_emails:
     - federico.rossi@creativa77.com.ar
+  extendablediamond:
+    ci_builds:
+      diamond-chain: extendablediamond/ci-nightly-release-local.yaml
+    notification_emails:
+    - federico.rossi@creativa77.com.ar
 
 jenkins_url: http://192.168.30.206:8080
 notification_emails:
@@ -111,6 +116,6 @@ prerequisites:
     NCVR
     =xhuY
     -----END PGP PUBLIC KEY BLOCK-----
-rosdistro_index_url: https://raw.githubusercontent.com/rep159-testing/rep159-rosdistro/feat/stage3-mixed/index-v4.yaml
+rosdistro_index_url: https://raw.githubusercontent.com/rep159-testing/rep159-rosdistro/feat/stage3-diamond/index-v4.yaml
 type: buildfarm
 version: 1
