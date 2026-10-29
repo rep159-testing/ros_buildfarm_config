@@ -7,6 +7,8 @@ build_tool_test_args: '--retest-until-pass 2 --ctest-args -LE xfail --pytest-arg
 build_environment_variables:
   ROSDISTRO_INDEX_URL: 'http://192.168.30.202:8088/rep159-rosdistro/index-v4.yaml'
   ROS_BUILDFARM_BINARY_IMPORT_DISTROS: composable
+install_packages:
+- vendor-composable-ros-workspace
 jenkins_job_label: ci-agent
 jenkins_job_priority: 200
 jenkins_job_timeout: 120
