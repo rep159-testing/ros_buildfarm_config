@@ -76,6 +76,16 @@ distributions:
       default: composablebin/release-build-local.yaml
     notification_emails:
     - federico.rossi@creativa77.com.ar
+  cachebase:
+    release_builds:
+      default: cachebase/release-build-local.yaml
+    notification_emails:
+    - federico.rossi@creativa77.com.ar
+  cachechild:
+    release_builds:
+      default: cachechild/release-build-local.yaml
+    notification_emails:
+    - federico.rossi@creativa77.com.ar
 
 jenkins_url: http://192.168.30.206:8080
 notification_emails:
