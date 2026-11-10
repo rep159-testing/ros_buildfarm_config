@@ -16,6 +16,7 @@ package_dependency_behavior:
   run_package_tests: false
 sync:
   packages:
+  - ros_workspace
   - downstream_bin_a
 repositories:
   keys:
