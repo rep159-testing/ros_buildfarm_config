@@ -11,12 +11,12 @@ distributions:
     ci_builds:
       nightly-release: binext/ci-nightly-release.yaml
     notification_emails:
-    - jrivero@honurobotics.com
+    - federico.rossi@creativa77.com.ar
   srcext:
     ci_builds:
       nightly-release: srcext/ci-nightly-release.yaml
     notification_emails:
-    - jrivero@honurobotics.com
+    - federico.rossi@creativa77.com.ar
   upstream:
     ci_builds:
       nightly-release: upstream/ci-nightly-release.yaml
@@ -25,7 +25,7 @@ distributions:
     release_builds:
       default: upstream/release-build.yaml
     notification_emails:
-    - jrivero@honurobotics.com
+    - federico.rossi@creativa77.com.ar
   extendable:
     ci_builds:
       nightly-release: extendable/ci-nightly-release.yaml
