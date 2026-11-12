@@ -64,6 +64,25 @@ distributions:
       diamond-chain: extendablediamond/ci-nightly-release.yaml
     notification_emails:
     - federico.rossi@creativa77.com.ar
+  extendablejetty:
+    ci_builds:
+      gazebo-jetty-release: extendablejetty/ci-nightly-release.yaml
+    release_builds:
+      extjetty: extendablejetty/release-build.yaml
+    notification_emails:
+    - federico.rossi@creativa77.com.ar
+  extendablelyricalsrc:
+    ci_builds:
+      gazebo-lyrical-source-rebuild: extendablelyricalsrc/ci-nightly-release.yaml
+    notification_emails:
+    - federico.rossi@creativa77.com.ar
+  extendablelyrical:
+    ci_builds:
+      gazebo-lyrical-binary-import: extendablelyrical/ci-nightly-release.yaml
+    release_builds:
+      extlyrical: extendablelyrical/release-build.yaml
+    notification_emails:
+    - federico.rossi@creativa77.com.ar
 
 jenkins_url: https://build.test.ros2.org
 notification_emails:
@@ -103,6 +122,6 @@ prerequisites:
     NCVR
     =xhuY
     -----END PGP PUBLIC KEY BLOCK-----
-rosdistro_index_url: https://raw.githubusercontent.com/rep159-testing/rep159-rosdistro/feat/extendable-workspace/index-v4.yaml
+rosdistro_index_url: https://raw.githubusercontent.com/rep159-testing/rep159-rosdistro/feat/extendable-gazebo/index-v4.yaml
 type: buildfarm
 version: 1
