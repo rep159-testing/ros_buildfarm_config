@@ -6,7 +6,6 @@ build_tool_args: '--cmake-args -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=ON --n
 build_tool_test_args: '--retest-until-pass 2 --ctest-args -LE xfail --pytest-args -m "not xfail"'
 build_environment_variables:
   ROSDISTRO_INDEX_URL: 'https://raw.githubusercontent.com/rep159-testing/rep159-rosdistro/feat/extendable-gazebo/index-v4.yaml'
-  ROS_BUILDFARM_BINARY_IMPORT_DISTROS: 'lyrical extendablejetty'
 jenkins_job_label: buildagent || ci-agent
 jenkins_job_priority: 200
 jenkins_job_timeout: 120
