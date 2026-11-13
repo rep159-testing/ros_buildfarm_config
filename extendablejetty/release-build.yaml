@@ -21,6 +21,9 @@ sync:
   - gz-cmake
   - gz-utils
   - gz-math
+  - gz-tools2
+  - gz-msgs
+  - gz-transport
 repositories:
   keys:
   - |
